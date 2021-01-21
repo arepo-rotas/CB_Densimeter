@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CB_Densimeter</string>
+    <string name="rendimiento_del_equipo_r">Rendimiento del equipo R%</string>
+</resources>

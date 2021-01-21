@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="120"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+
+        android:layout_width="1440px"
+        android:layout_height="2560px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/beer" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="1440px"
+        android:layout_height="2560px"
+
+
+        android:alpha="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@android:style/Widget.Holo.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoText="false"
+            android:text="Craft Beer Densimetro"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#68391502"
+            android:textColorHighlight="@color/black"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="46dp" />
+
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botones"
+            android:text="Como usar la app"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:drawableLeft="@drawable/ic_info"
+            app:backgroundTint="@color/cardview_shadow_end_color"
+            app:backgroundTintMode="add" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botones"
+            android:text="Calcular Rendimiento"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:drawableLeft="@drawable/ic_calcular"
+            app:backgroundTint="@color/cardview_shadow_end_color"
+            app:backgroundTintMode="add" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="46dp" />
+
+        <Button
+            android:id="@+id/btnAjustar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botones"
+            android:text="Ajustar Receta"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:drawableLeft="@drawable/ic_ajustar"
+            app:backgroundTint="@color/cardview_shadow_end_color"
+            app:backgroundTintMode="add" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

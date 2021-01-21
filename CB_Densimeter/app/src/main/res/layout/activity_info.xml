@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+
+        android:layout_width="1440px"
+        android:layout_height="2560px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/beer" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="1440px"
+        android:layout_height="2560px"
+
+
+        android:alpha="0.6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        style="@android:style/Widget.ScrollView"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#575014"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="Info Aplicacion"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#575014"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Es una aplicación para calcular el rendimiento y la evaporación de nuestro equipo de home brewing y posteriormente usar esos datos en las siguientes cocciones para conseguir la densidad inicial deseada y los litros de mosto objetivo. \n
+                Para el calculo inicial entre en el apartado 'Calcular' desde el menu principal, alli tiene que introducir los datos de su ultima cocción. Al pulsar en el boton '+Malta' se agrega una malta nueva y al pulsar sobre 'X' se elimina de la lista.\nLas maltas se pueden escoger de la lista de las principales maltas usadas con los datos del exctracto potencial asignado a cada una, o tambien se puede introducir los datos manualmente dejando escogida la opcion 'Otra' que viene por defecto.\n
+                Si pulsa sobre el boton 'Actualizar Maltas' se actualizarán las opciones del desplegable en el caso de que hubiera alguna actualización en la nube. Al introducir todos los datos pulse sobre el boton 'Calcular' para el calculo del rendimiento del equipo y la evaporación por hora. Una vez hecho esto puede pulsar en el boton 'Guardar' y se le ofrecerán las opciones de guardarlo en un perfil existente o crear un perfil nuevo.\n
+            Los datos del calculo anterior aparecerán precargados en ambas opciones, aunque tambien se pueden modificar manualmente. Si decide guardarlo en un perfil existente los datos del ultimo calculo haran la media con los que habia del calculo anterior y sobreescribiran los datos del perfil.\n
+            Desde esta pantalla tambien puede eliminar un perfil seleccionado en el desplegable pulsando sobre 'Borrar el perfil seleccionado'. Una vez que tengamos un perfil creado podemos volver al menu inicial e ir a 'Ajustar receta' cuando vaya a realizar una nueva coccion. Debe escoger el perfil deseado, introducir los datos objetivo de la receta  y pulsar sobre 'Ajustar la Receta'. Abajo se cargaran los datos ajustados en funcion de su perfil: Agua Inicial y las Cantidades de maltas a utilizar.\n
+            Importancia de las medidas: Para el agua y el mosto se introducen litros, el peso de las maltas se escribe en gramos, y el extracto potencial y la densidad se escribe en formato ejemplo '1038'. "
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#575014" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/botones"
+                android:drawableLeft="@drawable/ic_back"
+                android:text="Volver"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:backgroundTint="@color/cardview_shadow_end_color"
+                app:backgroundTintMode="add" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#575014"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
