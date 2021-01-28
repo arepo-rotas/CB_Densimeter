@@ -59,7 +59,11 @@ public class AjustarActivity extends AppCompatActivity {
         rellenarSpinner();
         rellenarSpinnerMaltas();
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,spinnerList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.spinner_item, spinnerList);
+
+        // Specify the layout to use when the list of choices appears
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         spinnerPerfil1.setAdapter(arrayAdapter);
 
         insertarValores();
@@ -121,9 +125,9 @@ Este metodo calcula el peso de las maltas que se deberian usar en una receta obj
             pesoT = pesoT + listaReceta.get(i).getMaltaPeso();
         }
 
-        float fd = Float.valueOf(editDensidadR.getText().toString()) - 1000;
-        float pd = Float.valueOf(editMostoR.getText().toString())*fd;
-        float ren = Float.valueOf(textViewRendimiento.getText().toString());
+        float fd = Float.parseFloat(editDensidadR.getText().toString()) - 1000;
+        float pd = Float.parseFloat(editMostoR.getText().toString())*fd;
+        float ren = Float.parseFloat(textViewRendimiento.getText().toString());
 
         for (int i = 0; i < listaReceta.size(); i++) {
             maltaFinal = new MaltasReceta();
@@ -161,10 +165,10 @@ este metodo ajusta la cantidad de agua inicial segun los datos de evaporacion de
             }
             pesoT = pesoT/1000;
 
-            float aguaInicial = Float.valueOf(editAguaInicialR.getText().toString());
-            float aguaFinal = Float.valueOf(editMostoR.getText().toString());
-            float tiempo = Float.valueOf(editTiempoCoccionR.getText().toString()) / 60;
-            float evaporacion = Float.valueOf(textViewEvaporacion.getText().toString());
+            float aguaInicial = Float.parseFloat(editAguaInicialR.getText().toString());
+            float aguaFinal = Float.parseFloat(editMostoR.getText().toString());
+            float tiempo = Float.parseFloat(editTiempoCoccionR.getText().toString()) / 60;
+            float evaporacion = Float.parseFloat(textViewEvaporacion.getText().toString());
 
             agua = aguaFinal + pesoT + (evaporacion*tiempo);
 
@@ -214,6 +218,7 @@ rellena el spinner de los perfiles con los datos de listaPerfiles
             listaPerfiles.add(perfil);
 
         }
+        cursor.close();
         db.close();
     }
 
@@ -225,7 +230,7 @@ rellena el spinner de los perfiles con los datos de listaPerfiles
 
         SQLiteDatabase db1 = helper.getReadableDatabase();
 
-        if(spinnerPerfil1.getSelectedItem().toString() != "Seleccione") {
+        if(!spinnerPerfil1.getSelectedItem().toString().equals("Seleccione")) {
             Cursor cursor = db1.rawQuery("SELECT * FROM " + Utilidades.TABLA_PERFILES + " WHERE " + Utilidades.CAMPO_NOMBRE_PERFIL+ " = '" + spinnerPerfil1.getSelectedItem().toString() +"'", null);
 
             cursor.moveToFirst();
@@ -235,7 +240,7 @@ rellena el spinner de los perfiles con los datos de listaPerfiles
 
             textViewRendimiento.setText(ren);
             textViewEvaporacion.setText(ev);
-
+            cursor.close();
 
         } else {
             textViewRendimiento.setText("");
@@ -258,7 +263,7 @@ rellena el spinner de los perfiles con los datos de listaPerfiles
         Spinner spinnerMaltas = (Spinner)maltasView.findViewById(R.id.spinnerMaltas);
         ImageView imageClear = (ImageView)maltasView.findViewById(R.id.imageClear);
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,maltasList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,maltasList);
         spinnerMaltas.setAdapter(arrayAdapter);
 
         imageClear.setOnClickListener(new View.OnClickListener() {

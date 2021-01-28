@@ -5,157 +5,162 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AjustarActivity">
+
     <ImageView
         android:id="@+id/imageView"
 
-        android:layout_width="1440px"
-        android:layout_height="2560px"
+        android:layout_width="480dp"
+        android:layout_height="853dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/beer" />
+        app:srcCompat="@drawable/beer"
+        android:contentDescription="@string/sirviendo_cerveza" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="1440px"
-        android:layout_height="2560px"
-
-
+        android:layout_width="480dp"
+        android:layout_height="853dp"
         android:alpha="0.6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fondo" />
+        app:srcCompat="@drawable/fondo"
+        android:contentDescription="@string/flat_background" />
 
     <ScrollView
         style="@android:style/Widget.ScrollView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/imageView">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Ajustar Receta"
+                android:text="@string/ajustar_receta"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="#575014"
+                android:textColor="@color/mainTextColor"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:gravity="left"
-                android:text="Escoja el perfil:"
-                android:textColor="#575014"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:gravity="start"
+                android:text="@string/escoja_el_perfil"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mainTextColor" />
 
             <FrameLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+
                 android:background="@drawable/campos">
 
                 <Spinner
                     android:id="@+id/spinnerPerfil1"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                />
             </FrameLayout>
 
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:gravity="left"
-                android:text="Rendimiento del equipo:"
-                android:textColor="#575014"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:gravity="start"
+                android:text="@string/rendimiento_del_equipo_r"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mainTextColor" />
 
             <TextView
                 android:id="@+id/textViewRendimiento"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:gravity="left"
-                android:textColor="#575014"
-                android:textSize="24sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:gravity="start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mainTextColor"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:gravity="left"
-                android:text="Evaporacion l/h:"
-                android:textColor="#575014"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:gravity="start"
+                android:text="@string/evaporacion"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mainTextColor" />
 
             <TextView
                 android:id="@+id/textViewEvaporacion"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:gravity="left"
-                android:textColor="#575014"
-                android:textSize="24sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:gravity="start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mainTextColor"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:gravity="left"
-                android:text="Receta:"
-                android:textColor="#575014"
-                android:textSize="18dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:gravity="start"
+                android:text="@string/receta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/mainTextColor"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editAguaInicialR"
                 style="@android:style/Widget.DeviceDefault.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:textColor="@color/mainTextColor"
+                android:textColorHint="@color/hintTextColor"
 
                 android:background="@drawable/campos"
                 android:ems="10"
-                android:hint="Agua inicial (litros)"
-                android:inputType="numberDecimal" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:hint="@string/agua_inicial_litros"
+                android:inputType="numberDecimal"
+                android:autofillHints="@string/agua_inicial_litros" />
 
             <EditText
                 android:id="@+id/editMostoR"
                 style="@android:style/Widget.DeviceDefault.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:autofillHints="@string/litros_de_mosto_objetivo"
 
                 android:background="@drawable/campos"
                 android:ems="10"
-                android:hint="Litros de mosto objetivo"
-                android:inputType="numberDecimal" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:hint="@string/litros_de_mosto_objetivo"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textColorHint="?android:attr/textColorHint" />
 
             <EditText
                 android:id="@+id/editTiempoCoccionR"
@@ -164,14 +169,13 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/campos"
                 android:ems="10"
-                android:hint="Tiempo Coccion (minutos)"
-                android:inputType="numberDecimal" />
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:hint="@string/tiempo_coccion_minutos"
+                android:inputType="numberDecimal"
+                android:autofillHints="@string/tiempo_coccion_minutos" />
 
             <EditText
                 android:id="@+id/editDensidadR"
@@ -180,16 +184,20 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/campos"
                 android:ems="10"
-                android:hint="Densidad inicial objetivo"
-                android:inputType="numberDecimal" />
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:hint="@string/densidad_inicial_objetivo"
+                android:inputType="numberDecimal"
+                android:autofillHints="@string/densidad_inicial_objetivo" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Maltas utilizadas:"
+                android:text="@string/maltas_utilizadas"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="#575014" />
+                android:textColor="@color/mainTextColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -200,14 +208,16 @@
                     android:id="@+id/btnAddR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/botones"
                     android:drawableLeft="@drawable/ic_add"
-                    android:text="Malta"
+                    android:drawableStart="@drawable/ic_add"
+                    android:text="@string/malta"
                     android:textSize="16sp"
                     android:textStyle="normal"
                     app:backgroundTint="@color/cardview_shadow_end_color"
-                    app:backgroundTintMode="add"
-                    android:layout_marginRight="10dp"/>
+                    app:backgroundTintMode="add" />
 
 
             </LinearLayout>
@@ -216,7 +226,7 @@
                 android:id="@+id/layoutListR"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -230,7 +240,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/botones"
-                android:text="Ajustar la Receta"
+                android:text="@string/ajustar_la_receta"
                 android:textSize="24sp"
                 android:textStyle="normal"
                 app:backgroundTint="@color/cardview_shadow_end_color"
@@ -246,8 +256,8 @@
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Agua inical (litros):"
-                    android:textColor="#575014"
+                    android:text="@string/agua_inicial_litros"
+                    android:textColor="@color/mainTextColor"
                     android:textStyle="bold" />
 
                 <TextView
@@ -255,8 +265,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0.0"
-                    android:gravity="right"
+                    android:gravity="end"
+                    android:text="@string/zero_zero"
                     android:textSize="24sp" />
 
 
@@ -272,8 +282,8 @@
                     android:layout_width="76dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Cantidades de maltas:"
-                    android:textColor="#575014"
+                    android:text="@string/cantidades_de_maltas"
+                    android:textColor="@color/mainTextColor"
                     android:textStyle="bold" />
 
                 <TextView
@@ -281,40 +291,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="0.0"
-                    android:gravity="right"
-                    android:textSize="24sp"
-                    />
+                    android:gravity="end"
+                    android:text="@string/zero_zero"
+                    android:textSize="24sp" />
 
 
             </LinearLayout>
 
 
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
             <Button
                 android:id="@+id/btnBack3"
+                android:layout_marginTop="32dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/botones"
                 android:drawableLeft="@drawable/ic_back"
-                android:text="Volver"
+                android:drawableStart="@drawable/ic_back"
+                android:text="@string/volver"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 app:backgroundTint="@color/cardview_shadow_end_color"
                 app:backgroundTintMode="add" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>
     </ScrollView>
