@@ -62,7 +62,8 @@ public class AjustarActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.spinner_item, spinnerList);
 
         // Specify the layout to use when the list of choices appears
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
         spinnerPerfil1.setAdapter(arrayAdapter);
 

@@ -57,7 +57,7 @@
                 android:layout_marginBottom="16dp"
                 android:text="@string/calculadora_de_rendimiento"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="#575014"
+                android:textColor="@color/mainTextColor"
                 android:textSize="24sp" />
 
             <EditText
@@ -70,6 +70,7 @@
                 android:autofillHints="@string/agua_inicial_litros"
                 android:background="@drawable/campos"
                 android:ems="10"
+                android:textColor="@color/mainTextColor"
                 android:hint="@string/agua_inicial_litros"
                 android:inputType="numberDecimal"
                 android:padding="8dp" />
@@ -82,7 +83,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:padding="8dp"
-
+                android:textColor="@color/mainTextColor"
                 android:background="@drawable/campos"
                 android:ems="10"
                 android:hint="@string/litros_de_mosto_final"
@@ -98,6 +99,7 @@
                 android:layout_marginBottom="8dp"
                 android:padding="8dp"
                 android:background="@drawable/campos"
+                android:textColor="@color/mainTextColor"
                 android:ems="10"
                 android:hint="@string/tiempo_coccion_minutos"
                 android:inputType="numberDecimal"
@@ -113,6 +115,7 @@
                 android:padding="8dp"
                 android:background="@drawable/campos"
                 android:ems="10"
+                android:textColor="@color/mainTextColor"
                 android:hint="@string/densidad_mosto_antes_de_inocular"
                 android:inputType="numberDecimal"
                 android:autofillHints="@string/densidad_mosto_antes_de_inocular" />
@@ -127,7 +130,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <Button
@@ -150,7 +153,7 @@
                 <Button
                     android:id="@+id/btnActualizar"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/botones"
                     android:drawableLeft="@drawable/ic_ajustar"
@@ -166,14 +169,16 @@
             <LinearLayout
                 android:id="@+id/layoutList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="vertical" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView13"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
 
             <Button
                 android:id="@+id/btnCalcular1"
@@ -189,7 +194,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
@@ -215,7 +220,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView

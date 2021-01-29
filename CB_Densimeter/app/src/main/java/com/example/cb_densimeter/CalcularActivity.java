@@ -292,7 +292,13 @@ Este metodo "infla" el layout con los views del layout maltas. Para que se agreg
         Spinner spinnerMaltas = (Spinner)maltasView.findViewById(R.id.spinnerMaltas);
         ImageView imageClear = (ImageView)maltasView.findViewById(R.id.imageClear);
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,maltasList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,maltasList);
+//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.spinner_item,maltasList);
+
+        // Specify the layout to use when the list of choices appears
+//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+
         spinnerMaltas.setAdapter(arrayAdapter);
 
         imageClear.setOnClickListener(new View.OnClickListener() {
