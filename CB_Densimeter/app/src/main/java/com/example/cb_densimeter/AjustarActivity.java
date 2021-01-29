@@ -264,7 +264,9 @@ rellena el spinner de los perfiles con los datos de listaPerfiles
         Spinner spinnerMaltas = (Spinner)maltasView.findViewById(R.id.spinnerMaltas);
         ImageView imageClear = (ImageView)maltasView.findViewById(R.id.imageClear);
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,maltasList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,R.layout.spinner_item,maltasList);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+
         spinnerMaltas.setAdapter(arrayAdapter);
 
         imageClear.setOnClickListener(new View.OnClickListener() {

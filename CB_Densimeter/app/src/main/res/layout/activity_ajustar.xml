@@ -11,24 +11,24 @@
 
         android:layout_width="480dp"
         android:layout_height="853dp"
+        android:contentDescription="@string/sirviendo_cerveza"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/beer"
-        android:contentDescription="@string/sirviendo_cerveza" />
+        app:srcCompat="@drawable/beer" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="480dp"
         android:layout_height="853dp"
         android:alpha="0.6"
+        android:contentDescription="@string/flat_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fondo"
-        android:contentDescription="@string/flat_background" />
+        app:srcCompat="@drawable/fondo" />
 
     <ScrollView
         style="@android:style/Widget.ScrollView"
@@ -44,8 +44,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="32dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/textView9"
@@ -71,16 +71,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
-                android:padding="8dp"
+                android:background="@drawable/campos"
 
-                android:background="@drawable/campos">
+                android:padding="8dp">
 
                 <Spinner
                     android:id="@+id/spinnerPerfil1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                />
+                    />
             </FrameLayout>
 
             <TextView
@@ -136,15 +136,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:textColor="@color/mainTextColor"
-                android:textColorHint="@color/hintTextColor"
-
+                android:autofillHints="@string/agua_inicial_litros"
                 android:background="@drawable/campos"
                 android:ems="10"
+
                 android:hint="@string/agua_inicial_litros"
                 android:inputType="numberDecimal"
-                android:autofillHints="@string/agua_inicial_litros" />
+                android:padding="8dp"
+                android:textColor="@color/mainTextColor"
+                android:textColorHint="@color/hintTextColor" />
 
             <EditText
                 android:id="@+id/editMostoR"
@@ -167,29 +167,29 @@
                 style="@android:style/Widget.DeviceDefault.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/campos"
-                android:ems="10"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:padding="8dp"
+                android:autofillHints="@string/tiempo_coccion_minutos"
+                android:background="@drawable/campos"
+                android:ems="10"
 
                 android:hint="@string/tiempo_coccion_minutos"
                 android:inputType="numberDecimal"
-                android:autofillHints="@string/tiempo_coccion_minutos" />
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/editDensidadR"
                 style="@android:style/Widget.DeviceDefault.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/campos"
-                android:ems="10"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:padding="8dp"
+                android:autofillHints="@string/densidad_inicial_objetivo"
+                android:background="@drawable/campos"
+                android:ems="10"
                 android:hint="@string/densidad_inicial_objetivo"
                 android:inputType="numberDecimal"
-                android:autofillHints="@string/densidad_inicial_objetivo" />
+                android:padding="8dp" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -208,11 +208,11 @@
                     android:id="@+id/btnAddR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
                     android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/botones"
-                    android:drawableLeft="@drawable/ic_add"
                     android:drawableStart="@drawable/ic_add"
+                    android:drawableLeft="@drawable/ic_add"
                     android:text="@string/malta"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -226,13 +226,16 @@
                 android:id="@+id/layoutListR"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+
                 android:orientation="vertical" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView13"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
 
             <Button
                 android:id="@+id/btnCalcularReceta"
@@ -248,6 +251,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
@@ -301,12 +305,12 @@
 
             <Button
                 android:id="@+id/btnBack3"
-                android:layout_marginTop="32dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/botones"
-                android:drawableLeft="@drawable/ic_back"
                 android:drawableStart="@drawable/ic_back"
+                android:drawableLeft="@drawable/ic_back"
                 android:text="@string/volver"
                 android:textSize="16sp"
                 android:textStyle="normal"
