@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name">CB_Densimeter</string>
     <string name="rendimiento_del_equipo_r">Rendimiento del equipo R%</string>
+    <string name="calculadora_de_rendimiento">Calculadora de rendimiento</string>
+    <string name="agua_inicial_litros">Agua inicial (litros)</string>
+    <string name="litros_de_mosto_final">Litros de mosto final</string>
+    <string name="tiempo_coccion_minutos">Tiempo Coccion (minutos)</string>
+    <string name="densidad_mosto_antes_de_inocular">Densidad mosto antes de inocular (ej. 1048)</string>
+    <string name="maltas_utilizadas">Maltas utilizadas:</string>
+    <string name="malta">Malta</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="calcular">Calcular</string>
+    <string name="evaporacion">Evaporacion (l/h)</string>
+    <string name="guardar">Guardar</string>
+    <string name="volver">Volver</string>
+    <string name="sirviendo_cerveza">Sirviendo cerveza</string>
+    <string name="flat_background">Flat background</string>
+    <string name="ajustar_receta">Ajustar Receta</string>
+    <string name="escoja_el_perfil">Escoja el perfil:</string>
+    <string name="receta">Receta</string>
+    <string name="litros_de_mosto_objetivo">Litros de mosto objetivo</string>
+    <string name="densidad_inicial_objetivo">Densidad inicial objetivo</string>
+    <string name="ajustar_la_receta">Ajustar la Receta</string>
+    <string name="cantidades_de_maltas">Cantidades de maltas:</string>
+    <string name="zero_zero">0.0</string>
+    <string name="info_aplicacion">Info Aplicacion</string>
+    <string name="info_aplicacion_text">Es una aplicación para calcular el rendimiento y la evaporación de nuestro equipo de home brewing y posteriormente usar esos datos en las siguientes cocciones para conseguir la densidad inicial deseada y los litros de mosto objetivo. \n\n Para el calculo inicial entre en el apartado \'Calcular\' desde el menu principal, alli tiene que introducir los datos de su ultima cocción. Al pulsar en el boton \'+Malta\' se agrega una malta nueva y al pulsar sobre \'X\' se elimina de la lista.\n\n Las maltas se pueden escoger de la lista de las principales maltas usadas con los datos del extracto potencial asignado a cada una, o tambien se puede introducir los datos manualmente dejando escogida la opcion \'Otra\' que viene por defecto.\n\n Si pulsa sobre el boton \'Actualizar Maltas\' se actualizarán las opciones del desplegable en el caso de que hubiera alguna actualización en la nube. Al introducir todos los datos pulse sobre el boton \'Calcular\' para el calculo del rendimiento del equipo y la evaporación por hora. Una vez hecho esto puede pulsar en el boton \'Guardar\' y se le ofrecerán las opciones de guardarlo en un perfil existente o crear un perfil nuevo.\n\n Los datos del calculo anterior aparecerán precargados en ambas opciones, aunque tambien se pueden modificar manualmente. Si decide guardarlo en un perfil existente los datos del ultimo calculo haran la media con los que habia del calculo anterior y sobreescribiran los datos del perfil.\n\n Desde esta pantalla tambien puede eliminar un perfil seleccionado en el desplegable pulsando sobre \'Borrar el perfil seleccionado\'. Una vez que tengamos un perfil creado podemos volver al menu inicial e ir a \'Ajustar receta\' cuando vaya a realizar una nueva coccion. Debe escoger el perfil deseado, introducir los datos objetivo de la receta y pulsar sobre \'Ajustar la Receta\'. Abajo se cargaran los datos ajustados en funcion de su perfil: Agua Inicial y las Cantidades de maltas a utilizar.\n\n Importancia de las medidas: Para el agua y el mosto se introducen litros, el peso de las maltas se escribe en gramos, y el extracto potencial y la densidad se escribe en formato ejemplo \'1038\'.</string>
+    <string name="peso_g">Peso(g)</string>
+    <string name="p_d">P.D.</string>
 </resources>
